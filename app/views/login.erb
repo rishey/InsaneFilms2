@@ -1,0 +1,19 @@
+<div class = "container">
+<h1>login</h1>
+
+<form id="login" action = "/" method = "POST">
+	<h3>Welcome</h3>
+	<label for="user_email">Email:</label>
+	<input type="text" name = "user_email" placeholder = "me@memail.com"><br>
+	<label for="user-password">Password:</label>
+	<input input type ="password" name="user_password" placeholder ="*****"><br>
+	<input type="submit" name = "Submit"> <br>
+</form>
+<div class = "error">
+	<% if @error %>
+	  <p id="error"><%= @error %></p>
+	  or <a href="/newuser">Create New User</a>
+	<% end %>
+</div>
+
+</div>
