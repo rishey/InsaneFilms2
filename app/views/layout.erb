@@ -18,6 +18,19 @@
   <title></title>
 </head>
 <body>
+<!-- conditionally show login logout based on session -->
+<h5 class="header_logout">
+<% if session[:user_id] %>
+  <a href="/logout">logout</a>
+  <a href="/createpost">post</a>
+<% else %>
+   <a href="/login">login</a> 
+<% end %>
+</h5>
+<div class="header">
+
+</div>
+
   <%= yield %>
 </body>
 </html>

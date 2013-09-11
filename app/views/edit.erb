@@ -1,0 +1,12 @@
+<div class = "container">
+<div class = "single_post">
+<h1>EDIT POST</h1>
+<form id="edit_post" action="/edit/<%=@post.id%>" method="POST">
+SUBJECT:<input type="text" name="post_subject" label="subject" value =<%= @post.title.to_s %> ><br>
+BODY: <textarea name="post_body" id="content"><%= @post.body %></textarea>
+<input type="submit" label = "Post" name = "Post"> 
+
+</form>
+<form id="delete_post" action="/delete/<%=@post.id%>" method="POST">
+<button name="delete" formmethod="post" action="/delete/<%=@post.id%>">DELETE POST</button>
+</div>

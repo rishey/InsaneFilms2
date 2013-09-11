@@ -9,11 +9,8 @@
 	<input input type ="password" name="user_password" placeholder ="*****"><br>
 	<input type="submit" name = "Submit"> <br>
 </form>
-<div class = "error">
-	<% if @error %>
-	  <p id="error"><%= @error %></p>
-	  or <a href="/newuser">Create New User</a>
-	<% end %>
+<div class = "errors">
+	<%= session[:error] %>
 </div>
 
 </div>
