@@ -53,13 +53,11 @@ post '/' do
 	if (@user = User.find_by_email(params[:user_email]).try(:authenticate,params[:user_password]))
 		p "troof"
 		session[:user_id] = @user.id
-		p @user.id
-				p "YES*************"
+		p session[:user_id]
 		redirect "/"
 	else 
 		@error = "You fucked up. Try again."
-		session.clear
-		erb :index
+		redirect "/"
 	end
 end
 
