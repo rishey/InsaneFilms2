@@ -42,7 +42,6 @@ get '/edit/:id' do
 	else
 		@error = "Can't EDIT. Not logged in. Don't SPAM me fucker."
 		session[:error]=@error
-		# **** FIGURE OUT WHY CAN'T USE erb: index here???? *****
 		redirect "/"
 	end
 end

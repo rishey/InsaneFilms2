@@ -1,9 +1,10 @@
 class CreatePosts < ActiveRecord::Migration
   def change
-  	create_table :posts do |t|
+  	create_table 		:posts do |t|
   		t.string 			:title
   		t.text 	 			:body
-  		t.belongs_to	:user
+  		t.integer			:user_id
+  		t.date				:date
   		t.timestamps
   	end
   end
