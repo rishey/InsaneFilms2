@@ -1,3 +1,7 @@
+ul li {
+	background-color: gray;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
@@ -23,6 +27,7 @@ form  {
 	opacity: 1;
 	margin: 5px auto;
 	padding: 100px	;
+	border-radius: 20px;
 }
 
 #delete_post {
@@ -40,6 +45,4 @@ form  {
 	color: red;
 }
 
-.single_post{
-	
-}
+
